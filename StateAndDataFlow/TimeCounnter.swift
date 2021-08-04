@@ -35,7 +35,7 @@ class TimerCounter: ObservableObject  {
             counter = 8
             buttonTitle = "Спрашивай!"
         } else {
-            buttonTitle = "Погоди ка"
+            buttonTitle = "Хм..."
         }
         
         objectWillChange.send(self)
@@ -60,7 +60,7 @@ class TimerCounter: ObservableObject  {
     }
     
     private func random() {
-        let x = Int.random(in: 0...4)
+        let x = Int.random(in: 1...4)
         switch x {
         case 1:
             rnd = "Да!"

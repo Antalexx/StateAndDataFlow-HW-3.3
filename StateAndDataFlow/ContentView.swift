@@ -92,7 +92,7 @@ struct ButtonLogout: View {
     var body: some View {
         VStack {
             Button(action: { self.isRegister = false }) {
-                Text("Я пошел")
+                Text("Прощай")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
