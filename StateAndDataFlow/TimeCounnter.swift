@@ -60,12 +60,18 @@ class TimerCounter: ObservableObject  {
     }
     
     private func random() {
-        let x = Bool.random()
+        let x = Int.random(in: 0...4)
         switch x {
-        case true:
-            rnd = "YES"
-        case false:
-            rnd = "NO"
+        case 1:
+            rnd = "Да!"
+        case 2:
+            rnd = "Нет!"
+        case 3:
+            rnd = "Возможно"
+        case 4:
+            rnd = "..."
+        default:
+            break
         }  
     }
 }
