@@ -49,15 +49,16 @@ class TimerCounter: ObservableObject  {
             random()
             buttonTitle = "Еще?"
         }
-        
-        
+                
         objectWillChange.send(self)
+        
     }
     
     private func killtimer() {
         timer?.invalidate()
         timer = nil
     }
+    
     private func random() {
         let x = Bool.random()
         switch x {
@@ -65,7 +66,6 @@ class TimerCounter: ObservableObject  {
             rnd = "YES"
         case false:
             rnd = "NO"
-        }
-        
+        }  
     }
 }

@@ -16,6 +16,5 @@ final class UserManager: ObservableObject {
     
     init(name :String) {
         self.name = name
-    }
-    
+    }   
 }
