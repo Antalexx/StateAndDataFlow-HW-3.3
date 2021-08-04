@@ -11,14 +11,15 @@ import Foundation
 class TimerCounter: ObservableObject  {
     let objectWillChange = PassthroughSubject<TimerCounter, Never>()
     
-    var counter = 5
+    var counter = 8
     var timer: Timer?
-    var buttonTitle = "Start"
+    var buttonTitle = "Спрашивай!"
+    var rnd = ""
     
     func startTimer() {
         if counter > 0 {
             timer = Timer.scheduledTimer(
-                timeInterval: 1,
+                timeInterval: 0.4,
                 target: self,
                 selector: #selector(updateCounter),
                 userInfo: nil,
@@ -26,14 +27,15 @@ class TimerCounter: ObservableObject  {
             )
         }
         
-        buttonDidTap()
+        buttonDidTapped()
     }
-    private func buttonDidTap() {
-        if buttonTitle == "Reset" {
-            counter = 5
-            buttonTitle = "Start"
+    private func buttonDidTapped() {
+        if buttonTitle == "Еще?" {
+            rnd = ""
+            counter = 8
+            buttonTitle = "Спрашивай!"
         } else {
-            buttonTitle = "Wait..."
+            buttonTitle = "Погоди ка"
         }
         
         objectWillChange.send(self)
@@ -44,8 +46,10 @@ class TimerCounter: ObservableObject  {
             counter -= 1
         } else {
             killtimer()
-            buttonTitle = "Reset"
+            random()
+            buttonTitle = "Еще?"
         }
+        
         
         objectWillChange.send(self)
     }
@@ -53,5 +57,15 @@ class TimerCounter: ObservableObject  {
     private func killtimer() {
         timer?.invalidate()
         timer = nil
+    }
+    private func random() {
+        let x = Bool.random()
+        switch x {
+        case true:
+            rnd = "YES"
+        case false:
+            rnd = "NO"
+        }
+        
     }
 }
