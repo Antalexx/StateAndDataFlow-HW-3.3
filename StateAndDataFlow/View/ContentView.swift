@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @StateObject private var timer = TimerCounter()
     @EnvironmentObject var user: UserManager
-    @AppStorage("\(UserManager.)")
+    
     
     var body: some View {
     
