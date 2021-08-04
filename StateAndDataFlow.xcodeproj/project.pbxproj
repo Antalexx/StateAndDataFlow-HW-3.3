@@ -41,6 +41,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90C1DF0626BB1803005F7936 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90F0EDFC26B96339009D0072 /* Preview Content */,
+				90F0EDFA26B96339009D0072 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		90C1DF0726BB1866005F7936 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90F0EDF826B96337009D0072 /* ContentView.swift */,
+				90F0EE0926B9750B009D0072 /* StarterView.swift */,
+				90F0EE0B26B975B0009D0072 /* RegisterView.swift */,
+				90F0EE0526B965FB009D0072 /* TimeCounnter.swift */,
+				90F0EE0726B97343009D0072 /* UserManager.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		90F0EDEA26B96337009D0072 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +81,10 @@
 		90F0EDF526B96337009D0072 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				90C1DF0726BB1866005F7936 /* View */,
+				90C1DF0626BB1803005F7936 /* Resources */,
 				90F0EDF626B96337009D0072 /* StateAndDataFlowApp.swift */,
-				90F0EDF826B96337009D0072 /* ContentView.swift */,
-				90F0EDFA26B96339009D0072 /* Assets.xcassets */,
 				90F0EDFF26B96339009D0072 /* Info.plist */,
-				90F0EDFC26B96339009D0072 /* Preview Content */,
-				90F0EE0526B965FB009D0072 /* TimeCounnter.swift */,
-				90F0EE0726B97343009D0072 /* UserManager.swift */,
-				90F0EE0926B9750B009D0072 /* StarterView.swift */,
-				90F0EE0B26B975B0009D0072 /* RegisterView.swift */,
 			);
 			path = StateAndDataFlow;
 			sourceTree = "<group>";
